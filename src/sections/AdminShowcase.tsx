@@ -1,16 +1,6 @@
 import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
 
-// TODO: swap for a real screenshot once the read-only demo account exists
-// and the dashboard has been captured — see notme-app migration 0032.
-function ScreenshotPlaceholder() {
-  return (
-    <div className="flex aspect-video items-center justify-center rounded-2xl border border-dashed border-neutral-300 bg-neutral-50 text-sm text-neutral-400 dark:border-neutral-700 dark:bg-neutral-900">
-      스크린샷 준비 중 — Live Demo로 직접 확인해보세요
-    </div>
-  )
-}
-
 const SCOPE = [
   { title: 'Missions', body: '전체 상태의 미션 목록, 필터링. 멈춰있거나 방치된 요청은 관리자가 직접 취소.' },
   { title: 'Users', body: '가입자 목록. 문제가 있는 계정을 비활성화하고, 신규 히어로 신청을 승인.' },
@@ -27,7 +17,11 @@ export default function AdminShowcase() {
           description="소비자 앱과 완전히 분리된 내부 운영 툴. 데이터 테이블, 권한 분리, 집계 쿼리를 보여주기 위한 의도적인 포트폴리오 결과물이기도 합니다."
         />
 
-        <ScreenshotPlaceholder />
+        <img
+          src="/screens/admin/dashboard.png"
+          alt="NotMe Admin dashboard — KPI cards, mission status summary, recent missions table"
+          className="w-full rounded-2xl border border-neutral-200 dark:border-neutral-800"
+        />
 
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {SCOPE.map((item) => (
