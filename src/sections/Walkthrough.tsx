@@ -70,7 +70,7 @@ export default function Walkthrough() {
         <SectionHeading eyebrow="Product" title={t.title} description={t.description} />
 
         <div className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
-          <video src="/videos/side-by-side.mp4" controls playsInline className="w-full" />
+          <video src="/videos/side-by-side.mp4" autoPlay muted loop playsInline className="w-full" />
         </div>
 
         <div className="mt-12 grid gap-10">
