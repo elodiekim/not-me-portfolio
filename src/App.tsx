@@ -1,3 +1,4 @@
+import { LanguageProvider } from './i18n/LanguageContext'
 import Nav from './components/Nav'
 import Hero from './sections/Hero'
 import Problem from './sections/Problem'
@@ -9,7 +10,7 @@ import Footer from './sections/Footer'
 
 function App() {
   return (
-    <>
+    <LanguageProvider>
       <Nav />
       <main>
         <Hero />
@@ -20,7 +21,7 @@ function App() {
         <TechStack />
       </main>
       <Footer />
-    </>
+    </LanguageProvider>
   )
 }
 
