@@ -72,25 +72,15 @@ export default function Walkthrough() {
         <div className="grid gap-6 sm:grid-cols-2">
           <div>
             <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{t.userFlow}</h3>
-            <video
-              src="/videos/user-flow.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800"
-            />
+            <div className="mx-auto w-full max-w-[280px] rounded-2xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-950">
+              <video src="/videos/user-flow.mp4" autoPlay muted loop playsInline className="w-full rounded-lg" />
+            </div>
           </div>
           <div>
             <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{t.heroFlow}</h3>
-            <video
-              src="/videos/hero-flow.mp4"
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800"
-            />
+            <div className="mx-auto w-full max-w-[280px] rounded-2xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-950">
+              <video src="/videos/hero-flow.mp4" autoPlay muted loop playsInline className="w-full rounded-lg" />
+            </div>
           </div>
         </div>
 
