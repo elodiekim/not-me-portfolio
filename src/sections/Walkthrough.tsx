@@ -69,8 +69,29 @@ export default function Walkthrough() {
       <Container>
         <SectionHeading eyebrow="Product" title={t.title} description={t.description} />
 
-        <div className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
-          <video src="/videos/side-by-side.mp4" autoPlay muted loop playsInline className="w-full" />
+        <div className="grid gap-6 sm:grid-cols-2">
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{t.userFlow}</h3>
+            <video
+              src="/videos/user-flow.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800"
+            />
+          </div>
+          <div>
+            <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{t.heroFlow}</h3>
+            <video
+              src="/videos/hero-flow.mp4"
+              autoPlay
+              muted
+              loop
+              playsInline
+              className="mx-auto w-full max-w-[280px] overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800"
+            />
+          </div>
         </div>
 
         <div className="mt-12 grid gap-10">
