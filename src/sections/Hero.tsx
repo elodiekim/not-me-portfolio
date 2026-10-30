@@ -30,8 +30,9 @@ export default function Hero() {
   return (
     <section id="top" className="pt-20 pb-24 text-center sm:pt-28">
       <Container>
-        <img src="/logo/notme-icon-512.png" alt="NotMe logo" className="mx-auto h-20 w-20 rounded-3xl shadow-lg" />
-        <h1 className="mt-8 text-4xl font-bold tracking-tight sm:text-6xl">NotMe</h1>
+        <h1 className="inline-block rounded-2xl px-4 py-3 dark:bg-white">
+          <img src="/logo/brand-logo.png" alt="NotMe" className="h-16 w-auto sm:h-20" />
+        </h1>
         <p className="mt-3 text-lg font-medium text-primary-dark sm:text-xl">Uber for Weird Problems</p>
         <p className="mx-auto mt-6 max-w-xl text-balance text-neutral-600 dark:text-neutral-400">{t.subcopy}</p>
 
