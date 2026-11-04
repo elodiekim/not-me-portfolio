@@ -45,12 +45,12 @@ const COPY = {
 function ScreenGrid({ title, screens }: { title: string; screens: { src: string; label: string }[] }) {
   return (
     <div>
-      <h3 className="mb-4 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{title}</h3>
+      <h3 className="mb-5 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{title}</h3>
       <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
         {screens.map((screen) => (
           <figure key={screen.src} className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
             <img src={screen.src} alt={screen.label} className="w-full" loading="lazy" />
-            <figcaption className="bg-neutral-50 px-3 py-2 text-xs text-neutral-600 dark:bg-neutral-900 dark:text-neutral-400">
+            <figcaption className="border-t border-neutral-200 bg-neutral-50 px-3 py-3 text-xs text-neutral-600 dark:border-neutral-800 dark:bg-neutral-900 dark:text-neutral-400">
               {screen.label}
             </figcaption>
           </figure>
@@ -84,7 +84,7 @@ export default function Walkthrough() {
           </div>
         </div>
 
-        <div className="mt-12 grid gap-10">
+        <div className="mt-12 grid gap-12">
           <ScreenGrid title={t.userFlow} screens={USER_FLOW[lang]} />
           <ScreenGrid title={t.heroFlow} screens={HERO_FLOW[lang]} />
         </div>
