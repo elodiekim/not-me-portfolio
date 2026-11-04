@@ -4,24 +4,58 @@ import { useLanguage } from '../i18n/LanguageContext'
 
 const COPY = {
   ko: {
-    title: '왜 바퀴벌레 제거부터 시작했나',
-    intro:
-      'NotMe는 "이상하고 애매한 집안 문제"를 전부 다루는 걸 최종 목표로 하지만, MVP는 하나의 가설만 검증하도록 의도적으로 좁혔습니다.',
-    quote: '"사람들은 바퀴벌레가 나타났을 때, 앱으로 즉시 근처 사람에게 제거를 요청할 의향이 있는가?"',
-    body1:
-      '스파이더, 벌, 무거운 짐, 높은 곳 전구 교체 같은 다른 카테고리는 전부 "앞으로 확장 가능한 비전"으로만 남겨두고, 실제 개발은 바퀴벌레 제거 하나에 집중했습니다. 기능을 넓히는 대신 하나의 흐름을 끝까지 완성도 있게 만드는 쪽을 택했습니다.',
-    body2:
-      '리뷰는 User → Hero 단방향, 평점은 단순 산술 평균 — 둘 다 샘플이 적을 때의 변동성 같은 더 정교한 설계가 가능하다는 걸 알면서도, 신호가 생기기 전까지는 일부러 보류한 결정입니다. "지금 필요하지 않은 걸 먼저 만들지 않는다"는 원칙을 프로덕트 문서에도, 코드에도 동일하게 적용했습니다.',
+    title: '가장 급하고, 가장 설명하기 어려운 순간부터',
+    body1: (
+      <>
+        집 안에 바퀴벌레가 나타났을 때 필요한 건 검색 결과나 예약 폼이 아니라,
+        <br />
+        지금 바로 도움을 줄 수 있는 사람입니다.
+      </>
+    ),
+    body2: (
+      <>
+        NotMe는 그 짧고 난감한 순간에
+        <br />
+        &ldquo;내가 직접 해결하지 않아도 된다&rdquo;는 선택지를 만드는 서비스로 시작했습니다.
+      </>
+    ),
+    quote: '"낯선 생활 문제를, 필요한 순간에 가까운 사람에게 맡길 수 있을까?"',
+    closing: (
+      <>
+        첫 MVP에서는 바퀴벌레 제거 하나에만 집중했습니다.
+        <br />
+        요청부터 매칭, 완료, 리뷰까지의 한 흐름이 실제로 작동하는지
+        <br />
+        확인하는 것이 우선이었기 때문입니다.
+      </>
+    ),
   },
   en: {
-    title: 'Why Start With Cockroach Removal?',
-    intro:
-      "NotMe's long-term goal is to handle any weird, awkward household problem — but the MVP was deliberately narrowed to validate a single hypothesis.",
-    quote: '"When a cockroach shows up, are people willing to use an app to request immediate help from someone nearby?"',
-    body1:
-      "Other categories — spiders, bees, heavy lifting, changing a lightbulb you can't reach — stayed on the roadmap as future vision only. Actual development focused on cockroach removal alone. Instead of spreading across features, I chose to polish one complete flow end to end.",
-    body2:
-      'Reviews are one-directional (User → Hero), and ratings are a simple arithmetic mean — both could be more sophisticated (e.g. handling small-sample volatility), but I deliberately held off until there\'s a real signal to justify it. The same "don\'t build what you don\'t need yet" principle shows up in the product docs and in the code.',
+    title: "Starting with the moment that's most urgent — and hardest to explain",
+    body1: (
+      <>
+        When a cockroach shows up in your home, what you need isn&apos;t search results or a booking form —
+        <br />
+        it&apos;s someone who can help right now.
+      </>
+    ),
+    body2: (
+      <>
+        NotMe started as a way to offer one choice, in that short, awkward moment:
+        <br />
+        you don&apos;t have to handle it yourself.
+      </>
+    ),
+    quote: '"Could an unfamiliar, everyday problem be handed off to someone nearby, right when you need it?"',
+    closing: (
+      <>
+        The first MVP focused on just one thing: cockroach removal.
+        <br />
+        What mattered most was proving that one loop — request, match, complete, review —
+        <br />
+        actually works.
+      </>
+    ),
   },
 }
 
@@ -32,18 +66,14 @@ export default function Problem() {
   return (
     <section id="problem" className="py-20">
       <Container>
-        <SectionHeading eyebrow="Why" title={t.title} />
-        <div className="grid gap-8 sm:grid-cols-2">
-          <div>
-            <p className="text-neutral-700 dark:text-neutral-300">{t.intro}</p>
-            <blockquote className="mt-6 rounded-2xl bg-primary/10 p-6 text-lg font-medium text-ink dark:text-neutral-100">
-              {t.quote}
-            </blockquote>
-          </div>
-          <div className="space-y-4 text-neutral-700 dark:text-neutral-300">
-            <p>{t.body1}</p>
-            <p>{t.body2}</p>
-          </div>
+        <SectionHeading eyebrow="The starting point" title={t.title} />
+        <div className="max-w-2xl space-y-4 break-keep text-neutral-700 dark:text-neutral-300">
+          <p>{t.body1}</p>
+          <p>{t.body2}</p>
+          <blockquote className="rounded-2xl bg-primary/10 p-6 text-lg font-medium text-ink dark:text-neutral-100">
+            {t.quote}
+          </blockquote>
+          <p>{t.closing}</p>
         </div>
       </Container>
     </section>
