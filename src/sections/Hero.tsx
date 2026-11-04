@@ -3,23 +3,14 @@ import { useLanguage } from '../i18n/LanguageContext'
 
 const COPY = {
   ko: {
-    subcopy: (
-      <>
-        바퀴벌레 제거 요청 하나로 스코프를 좁힌 온디맨드 마켓플레이스 MVP.
-        <br />
-        기획부터 디자인, 소비자 앱, 운영 어드민까지 혼자 만들었습니다.
-      </>
-    ),
-    watchDemo: '데모 영상 보기',
+    headline: '바퀴벌레 제거 요청에서 시작한 온디맨드 마켓플레이스',
+    subcopy: '기획, 디자인, 앱, 운영 어드민까지 — 혼자 만든 풀스택 MVP.',
+    primaryCta: '앱 플로우 보기',
   },
   en: {
-    subcopy: (
-      <>
-        An on-demand marketplace MVP scoped down to one request: cockroach removal.
-        <br />I built it solo — product, design, the consumer app, and the ops admin dashboard.
-      </>
-    ),
-    watchDemo: 'Watch Demo Video',
+    headline: 'An on-demand marketplace, starting from cockroach removal requests',
+    subcopy: 'Product, design, the app, and the ops admin — a solo full-stack MVP.',
+    primaryCta: 'View App Flow',
   },
 }
 
@@ -28,37 +19,55 @@ export default function Hero() {
   const t = COPY[lang]
 
   return (
-    <section id="top" className="pt-20 pb-24 text-center sm:pt-28">
-      <Container>
-        <h1 className="inline-block rounded-2xl px-4 py-3 dark:bg-white">
-          <img src="/logo/brand-logo.png" alt="NotMe" className="h-16 w-auto sm:h-20" />
-        </h1>
-        <p className="mt-3 text-lg font-medium text-primary-dark sm:text-xl">Uber for Weird Problems</p>
-        <p className="mx-auto mt-6 max-w-xl text-balance text-neutral-600 dark:text-neutral-400">{t.subcopy}</p>
+    <section id="top" className="pt-10 pb-14 sm:pt-16 sm:pb-20">
+      <Container className="grid items-center gap-10 sm:grid-cols-2 sm:gap-12">
+        <div className="text-center sm:text-left">
+          <div className="flex items-center justify-center gap-3 sm:justify-start">
+            <img src="/logo/brand-logo.png" alt="NotMe" width={740} height={246} className="h-8 w-auto" />
+            <span className="text-sm font-semibold text-primary-dark">Uber for Weird Problems</span>
+          </div>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          <a
-            href="#walkthrough"
-            className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-ink transition-opacity hover:opacity-90"
-          >
-            {t.watchDemo}
-          </a>
-          <a
-            href="https://not-me-admin.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900"
-          >
-            Admin Live Demo
-          </a>
-          <a
-            href="https://github.com/elodiekim/not-me"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full border border-neutral-300 px-6 py-3 text-sm font-semibold transition-colors hover:bg-neutral-100 dark:border-neutral-700 dark:hover:bg-neutral-900"
-          >
-            GitHub
-          </a>
+          <h1 className="mt-5 text-3xl font-bold tracking-tight text-balance sm:text-4xl">{t.headline}</h1>
+          <p className="mt-4 text-neutral-600 dark:text-neutral-400">{t.subcopy}</p>
+
+          <div className="mt-8 flex flex-col items-center gap-4 sm:items-start">
+            <a
+              href="#walkthrough"
+              className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-ink transition-opacity hover:opacity-90"
+            >
+              {t.primaryCta}
+            </a>
+            <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
+              <a
+                href="https://not-me-admin.vercel.app"
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 transition-colors hover:text-neutral-900 hover:underline dark:hover:text-neutral-100"
+              >
+                Admin Demo
+              </a>
+              <span className="text-neutral-300 dark:text-neutral-700">·</span>
+              <a
+                href="https://github.com/elodiekim/not-me"
+                target="_blank"
+                rel="noreferrer"
+                className="underline-offset-4 transition-colors hover:text-neutral-900 hover:underline dark:hover:text-neutral-100"
+              >
+                GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div className="relative flex justify-center sm:justify-end">
+          <div className="absolute inset-0 -z-10 bg-primary/20 blur-3xl" aria-hidden />
+          <img
+            src="/screens/home-hero.png"
+            alt="NotMe home screen — request help for a cockroach in seconds"
+            width={390}
+            height={844}
+            className="w-full max-w-[280px] rounded-[2rem] border border-neutral-200 shadow-xl dark:border-neutral-800"
+          />
         </div>
       </Container>
     </section>
