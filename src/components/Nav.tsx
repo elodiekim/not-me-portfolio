@@ -3,17 +3,17 @@ import { useLanguage } from '../i18n/LanguageContext'
 
 const LINKS = {
   ko: [
-    { href: '#problem', label: '기획' },
     { href: '#walkthrough', label: '앱' },
     { href: '#admin', label: '어드민' },
     { href: '#engineering', label: '엔지니어링' },
+    { href: '#problem', label: '기획' },
     { href: '#stack', label: '스택' },
   ],
   en: [
-    { href: '#problem', label: 'Why' },
     { href: '#walkthrough', label: 'App' },
     { href: '#admin', label: 'Admin' },
     { href: '#engineering', label: 'Engineering' },
+    { href: '#problem', label: 'Why' },
     { href: '#stack', label: 'Stack' },
   ],
 }

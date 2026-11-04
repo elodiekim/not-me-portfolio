@@ -19,18 +19,17 @@ export default function Hero() {
   const t = COPY[lang]
 
   return (
-    <section id="top" className="pt-10 pb-14 sm:pt-16 sm:pb-20">
-      <Container className="grid items-center gap-10 sm:grid-cols-2 sm:gap-12">
+    <section id="top" className="pt-6 pb-8 sm:pt-16 sm:pb-20">
+      <Container className="grid items-center gap-6 sm:grid-cols-2 sm:gap-12">
         <div className="text-center sm:text-left">
-          <div className="flex items-center justify-center gap-3 sm:justify-start">
-            <img src="/logo/brand-logo.png" alt="NotMe" width={740} height={246} className="h-8 w-auto" />
-            <span className="text-sm font-semibold text-primary-dark">Uber for Weird Problems</span>
-          </div>
+          <span className="text-sm font-semibold text-primary-dark">Uber for Weird Problems</span>
 
-          <h1 className="mt-5 text-3xl font-bold tracking-tight text-balance sm:text-4xl">{t.headline}</h1>
-          <p className="mt-4 text-neutral-600 dark:text-neutral-400">{t.subcopy}</p>
+          <h1 className="mt-3 text-[1.6875rem] font-bold tracking-tight break-keep text-balance sm:mt-5 sm:text-[2rem]">
+            {t.headline}
+          </h1>
+          <p className="mt-3 text-neutral-600 sm:mt-4 dark:text-neutral-400">{t.subcopy}</p>
 
-          <div className="mt-8 flex flex-col items-center gap-4 sm:items-start">
+          <div className="mt-5 flex flex-col items-center gap-3 sm:mt-8 sm:items-start sm:gap-4">
             <a
               href="#walkthrough"
               className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-ink transition-opacity hover:opacity-90"
@@ -60,7 +59,7 @@ export default function Hero() {
         </div>
 
         <div className="relative flex justify-center sm:justify-end">
-          <div className="absolute inset-0 -z-10 bg-primary/20 blur-3xl" aria-hidden />
+          <div className="absolute inset-0 -z-10 bg-primary/12 blur-3xl" aria-hidden />
           <img
             src="/screens/home-hero.png"
             alt="NotMe home screen — request help for a cockroach in seconds"

@@ -14,10 +14,10 @@ function App() {
       <Nav />
       <main>
         <Hero />
-        <Problem />
         <Walkthrough />
         <AdminShowcase />
         <Engineering />
+        <Problem />
         <TechStack />
       </main>
       <Footer />
