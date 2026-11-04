@@ -46,7 +46,7 @@ function ScreenGrid({ title, screens }: { title: string; screens: { src: string;
   return (
     <div>
       <h3 className="mb-5 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{title}</h3>
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+      <div className="grid grid-cols-2 items-start gap-4 sm:grid-cols-4">
         {screens.map((screen) => (
           <figure key={screen.src} className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
             <img src={screen.src} alt={screen.label} className="w-full" loading="lazy" />
