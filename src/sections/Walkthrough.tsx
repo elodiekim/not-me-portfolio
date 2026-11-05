@@ -4,10 +4,10 @@ import { useLanguage } from '../i18n/LanguageContext'
 
 const USER_FLOW = {
   ko: [
-    { src: '/screens/user-flow/01-request.png', label: '요청 생성', desc: '이상한 문제(바퀴벌레 제거)를 몇 초 만에 요청으로 등록합니다.' },
-    { src: '/screens/user-flow/02-searching.png', label: '히어로 찾는 중', desc: '근처 히어로와 실시간으로 매칭되는 걸 기다립니다.' },
-    { src: '/screens/user-flow/03-mission-status.png', label: '미션 진행 상태', desc: '수락부터 이동 중까지, 히어로의 진행 상황을 실시간으로 확인합니다.' },
-    { src: '/screens/user-flow/04-complete-review.png', label: '완료 & 리뷰', desc: '미션이 끝나면 히어로를 평가하고 리뷰를 남깁니다.' },
+    { src: '/screens/user-flow/01-request.png', label: '요청하기', desc: '문제 종류와 위치를 보내면 주변 히어로에게 요청이 전달됩니다.' },
+    { src: '/screens/user-flow/02-searching.png', label: '매칭 중', desc: '수락 전까지 요청 상태를 확인합니다.' },
+    { src: '/screens/user-flow/03-mission-status.png', label: '진행 확인', desc: '수락된 히어로와 미션 상태를 확인합니다.' },
+    { src: '/screens/user-flow/04-complete-review.png', label: '완료와 리뷰', desc: '완료 후 경험을 기록합니다.' },
   ],
   en: [
     { src: '/screens/user-flow/01-request.png', label: 'Create Request', desc: 'Picks a weird problem (cockroach removal) and submits the request in seconds.' },

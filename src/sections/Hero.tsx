@@ -3,11 +3,13 @@ import { useLanguage } from '../i18n/LanguageContext'
 
 const COPY = {
   ko: {
+    eyebrow: '생활 문제 해결 매칭 서비스',
     headline: '바퀴벌레 제거 요청에서 시작한 온디맨드 마켓플레이스',
-    subcopy: '기획, 디자인, 앱, 운영 어드민까지 — 혼자 만든 풀스택 MVP.',
+    subcopy: '기획부터 소비자 앱, 운영 어드민, 권한 설계까지 혼자 만든 풀스택 MVP.',
     primaryCta: '앱 플로우 보기',
   },
   en: {
+    eyebrow: 'Uber for Weird Problems',
     headline: 'An on-demand marketplace, starting from cockroach removal requests',
     subcopy: 'Product, design, the app, and the ops admin — a solo full-stack MVP.',
     primaryCta: 'View App Flow',
@@ -22,7 +24,7 @@ export default function Hero() {
     <section id="top" className="scroll-mt-14 pt-6 pb-8 sm:pt-16 sm:pb-20">
       <Container className="grid items-center gap-6 sm:grid-cols-2 sm:gap-12">
         <div className="text-center sm:text-left">
-          <span className="text-sm font-semibold text-primary-dark">Uber for Weird Problems</span>
+          <span className="text-sm font-semibold text-primary-dark">{t.eyebrow}</span>
 
           <h1 className="mt-3 text-[1.6875rem] font-bold tracking-tight break-keep text-balance sm:mt-5 sm:text-[2rem]">
             {t.headline}
@@ -58,8 +60,7 @@ export default function Hero() {
           </div>
         </div>
 
-        <div className="relative flex justify-center sm:justify-end">
-          <div className="absolute inset-0 -z-10 bg-primary/12 blur-3xl" aria-hidden />
+        <div className="flex justify-center sm:justify-end">
           <img
             src="/screens/home-hero.png"
             alt="NotMe home screen — request help for a cockroach in seconds"
