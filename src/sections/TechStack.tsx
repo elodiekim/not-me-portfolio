@@ -37,7 +37,7 @@ export default function TechStack() {
   const t = COPY[lang]
 
   return (
-    <section id="stack" className="py-20">
+    <section id="stack" className="scroll-mt-14 py-20">
       <Container>
         <SectionHeading eyebrow="Stack" title="Tech Stack" />
         <div className="grid gap-8 sm:grid-cols-3">

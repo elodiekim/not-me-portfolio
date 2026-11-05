@@ -64,7 +64,7 @@ export default function Problem() {
   const t = COPY[lang]
 
   return (
-    <section id="problem" className="py-20">
+    <section id="problem" className="scroll-mt-14 py-20">
       <Container>
         <SectionHeading eyebrow="The starting point" title={t.title} />
         <div className="max-w-2xl space-y-4 break-keep text-neutral-700 dark:text-neutral-300">

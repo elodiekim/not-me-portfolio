@@ -32,7 +32,7 @@ export default function AdminShowcase() {
   const t = COPY[lang]
 
   return (
-    <section id="admin" className="py-20">
+    <section id="admin" className="scroll-mt-14 py-20">
       <Container>
         <SectionHeading eyebrow="Operations" title="Admin Dashboard" description={t.description} />
 

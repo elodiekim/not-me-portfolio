@@ -19,7 +19,7 @@ export default function Hero() {
   const t = COPY[lang]
 
   return (
-    <section id="top" className="pt-6 pb-8 sm:pt-16 sm:pb-20">
+    <section id="top" className="scroll-mt-14 pt-6 pb-8 sm:pt-16 sm:pb-20">
       <Container className="grid items-center gap-6 sm:grid-cols-2 sm:gap-12">
         <div className="text-center sm:text-left">
           <span className="text-sm font-semibold text-primary-dark">Uber for Weird Problems</span>

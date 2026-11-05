@@ -70,7 +70,7 @@ export default function Engineering() {
   const t = COPY[lang]
 
   return (
-    <section id="engineering" className="bg-neutral-50 py-20 dark:bg-neutral-900/40">
+    <section id="engineering" className="scroll-mt-14 bg-neutral-50 py-20 dark:bg-neutral-900/40">
       <Container>
         <SectionHeading eyebrow="Engineering" title={t.title} description={t.description} />
         <div className="grid gap-6 sm:grid-cols-2">
