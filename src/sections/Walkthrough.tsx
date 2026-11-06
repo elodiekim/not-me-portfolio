@@ -1,6 +1,22 @@
+import { useEffect, useRef, type VideoHTMLAttributes } from 'react'
 import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
 import { useLanguage } from '../i18n/LanguageContext'
+
+// React sets `muted` as a DOM property, not an HTML attribute, so by the time the
+// browser's autoplay gate checks for it, `autoplay` has often already fired and been
+// silently rejected (the element isn't muted yet as far as that one-time check sees).
+// Calling play() ourselves once mounted — after the muted property is definitely
+// applied — sidesteps the race entirely.
+function AutoplayVideo(props: VideoHTMLAttributes<HTMLVideoElement>) {
+  const ref = useRef<HTMLVideoElement>(null)
+
+  useEffect(() => {
+    ref.current?.play().catch(() => {})
+  }, [])
+
+  return <video ref={ref} {...props} />
+}
 
 const USER_FLOW = {
   ko: [
@@ -76,13 +92,13 @@ export default function Walkthrough() {
           <div>
             <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{t.userFlow}</h3>
             <div className="mx-auto w-full max-w-[280px] rounded-2xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-950">
-              <video src="/videos/user-flow.mp4" width={390} height={844} autoPlay muted loop playsInline className="w-full rounded-lg" />
+              <AutoplayVideo src="/videos/user-flow.mp4" width={390} height={844} muted loop playsInline className="w-full rounded-lg" />
             </div>
           </div>
           <div>
             <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{t.heroFlow}</h3>
             <div className="mx-auto w-full max-w-[280px] rounded-2xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-950">
-              <video src="/videos/hero-flow.mp4" width={390} height={844} autoPlay muted loop playsInline className="w-full rounded-lg" />
+              <AutoplayVideo src="/videos/hero-flow.mp4" width={390} height={844} muted loop playsInline className="w-full rounded-lg" />
             </div>
           </div>
         </div>
