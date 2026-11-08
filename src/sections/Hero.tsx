@@ -64,8 +64,8 @@ export default function Hero() {
           <img
             src="/screens/home-hero.png"
             alt="NotMe home screen — request help for a cockroach in seconds"
-            width={390}
-            height={789}
+            width={780}
+            height={1585}
             className="w-full max-w-[280px] rounded-[2rem] border border-neutral-200 shadow-xl dark:border-neutral-800"
           />
         </div>
