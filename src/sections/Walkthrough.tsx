@@ -65,7 +65,7 @@ function ScreenGrid({ title, screens }: { title: string; screens: { src: string;
       <div className="grid grid-cols-2 items-start gap-4 sm:grid-cols-4">
         {screens.map((screen, i) => (
           <figure key={screen.src} className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
-            <img src={screen.src} alt={screen.label} width={390} height={844} className="w-full" loading="lazy" />
+            <img src={screen.src} alt={screen.label} width={780} height={1688} className="w-full" loading="lazy" />
             <figcaption className="border-t border-neutral-200 bg-neutral-50 px-3 py-3 dark:border-neutral-800 dark:bg-neutral-900">
               <div className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
                 {String(i + 1).padStart(2, '0')} · {screen.label}
