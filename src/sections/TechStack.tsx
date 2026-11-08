@@ -7,7 +7,7 @@ const ADMIN_STACK = ['Vite', 'React', 'TypeScript', 'Tailwind CSS', 'shadcn/ui',
 const SHARED_STACK = ['Supabase', 'PostgreSQL', 'Row Level Security', 'Vercel']
 
 const COPY = {
-  ko: { consumer: 'Consumer App', admin: 'Admin Dashboard', shared: 'Shared Backend' },
+  ko: { consumer: '소비자 앱', admin: '운영 어드민', shared: '공용 백엔드' },
   en: { consumer: 'Consumer App', admin: 'Admin Dashboard', shared: 'Shared Backend' },
 }
 
