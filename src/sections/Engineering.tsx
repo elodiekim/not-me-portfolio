@@ -48,12 +48,15 @@ export default function Engineering() {
   return (
     <section id="engineering" className="scroll-mt-14 bg-neutral-50 py-20 dark:bg-neutral-900/40">
       <Container>
-        <SectionHeading eyebrow="Engineering" title={t.title} description={t.description} />
-        <div className="grid gap-6 sm:grid-cols-3">
-          {t.highlights.map((item) => (
-            <div key={item.title} className="rounded-2xl border border-neutral-200 bg-white p-6 dark:border-neutral-800 dark:bg-neutral-950">
-              <h3 className="font-semibold">{item.title}</h3>
-              <p className="mt-2 text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">{item.body}</p>
+        <SectionHeading index="03" eyebrow="Engineering" title={t.title} description={t.description} />
+        <div className="divide-y divide-neutral-200 dark:divide-neutral-800">
+          {t.highlights.map((item, i) => (
+            <div key={item.title} className="grid gap-2 py-6 first:pt-0 sm:grid-cols-[3rem_1fr] sm:gap-6">
+              <span className="font-mono text-sm text-primary-dark">{String(i + 1).padStart(2, '0')}</span>
+              <div>
+                <h3 className="font-semibold">{item.title}</h3>
+                <p className="mt-2 max-w-2xl text-sm leading-relaxed text-neutral-600 dark:text-neutral-400">{item.body}</p>
+              </div>
             </div>
           ))}
         </div>

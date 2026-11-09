@@ -11,23 +11,11 @@ const COPY = {
   en: { consumer: 'Consumer App', admin: 'Admin Dashboard', shared: 'Shared Backend' },
 }
 
-function Badge({ label }: { label: string }) {
-  return (
-    <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 text-sm text-neutral-700 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300">
-      {label}
-    </span>
-  )
-}
-
 function BadgeGroup({ title, items }: { title: string; items: string[] }) {
   return (
-    <div>
-      <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{title}</h3>
-      <div className="flex flex-wrap gap-2">
-        {items.map((item) => (
-          <Badge key={item} label={item} />
-        ))}
-      </div>
+    <div className="border-t border-neutral-200 pt-4 dark:border-neutral-800">
+      <h3 className="mb-2 font-mono text-xs text-neutral-500 dark:text-neutral-400">{title}</h3>
+      <p className="font-mono text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">{items.join('  ·  ')}</p>
     </div>
   )
 }
@@ -39,8 +27,8 @@ export default function TechStack() {
   return (
     <section id="stack" className="scroll-mt-14 py-20">
       <Container>
-        <SectionHeading eyebrow="Stack" title="Tech Stack" />
-        <div className="grid gap-8 sm:grid-cols-3">
+        <SectionHeading index="05" eyebrow="Stack" title="Tech Stack" />
+        <div className="grid gap-6 sm:grid-cols-3">
           <BadgeGroup title={t.consumer} items={CONSUMER_STACK} />
           <BadgeGroup title={t.admin} items={ADMIN_STACK} />
           <BadgeGroup title={t.shared} items={SHARED_STACK} />

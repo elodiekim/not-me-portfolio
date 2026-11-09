@@ -66,11 +66,11 @@ export default function Problem() {
   return (
     <section id="problem" className="scroll-mt-14 py-20">
       <Container>
-        <SectionHeading eyebrow="The starting point" title={t.title} />
+        <SectionHeading index="04" eyebrow="The starting point" title={t.title} />
         <div className="max-w-2xl space-y-4 break-keep text-neutral-700 dark:text-neutral-300">
           <p>{t.body1}</p>
           <p>{t.body2}</p>
-          <blockquote className="rounded-2xl bg-primary/10 p-6 text-lg font-medium text-ink dark:text-neutral-100">
+          <blockquote className="border-l-2 border-primary py-1 pl-6 text-lg font-medium text-ink dark:text-neutral-100">
             {t.quote}
           </blockquote>
           <p>{t.closing}</p>

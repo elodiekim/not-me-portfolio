@@ -61,14 +61,14 @@ const COPY = {
 function ScreenGrid({ title, screens }: { title: string; screens: { src: string; label: string; desc: string }[] }) {
   return (
     <div>
-      <h3 className="mb-5 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{title}</h3>
+      <h3 className="mb-5 font-mono text-xs text-neutral-500 dark:text-neutral-400">{title}</h3>
       <div className="grid grid-cols-2 items-start gap-4 sm:grid-cols-4">
         {screens.map((screen, i) => (
-          <figure key={screen.src} className="overflow-hidden rounded-2xl border border-neutral-200 dark:border-neutral-800">
+          <figure key={screen.src} className="overflow-hidden rounded-xl border border-neutral-200 dark:border-neutral-800">
             <img src={screen.src} alt={screen.label} width={780} height={1688} className="w-full" loading="lazy" />
             <figcaption className="border-t border-neutral-200 bg-neutral-50 px-3 py-3 dark:border-neutral-800 dark:bg-neutral-900">
               <div className="text-xs font-semibold text-neutral-700 dark:text-neutral-300">
-                {String(i + 1).padStart(2, '0')} · {screen.label}
+                <span className="font-mono text-primary-dark">{String(i + 1).padStart(2, '0')}</span> · {screen.label}
               </div>
               <p className="mt-1 text-[11px] leading-snug break-keep text-neutral-500 dark:text-neutral-400">{screen.desc}</p>
             </figcaption>
@@ -86,19 +86,19 @@ export default function Walkthrough() {
   return (
     <section id="walkthrough" className="scroll-mt-14 bg-neutral-50 py-20 dark:bg-neutral-900/40">
       <Container>
-        <SectionHeading eyebrow="Product" title={t.title} description={t.description} />
+        <SectionHeading index="01" eyebrow="Product" title={t.title} description={t.description} />
 
         <div className="grid gap-6 sm:grid-cols-2">
           <div>
-            <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{t.userFlow}</h3>
-            <div className="mx-auto w-full max-w-[280px] rounded-2xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-950">
-              <AutoplayVideo src="/videos/user-flow.mp4" width={390} height={844} muted loop playsInline className="w-full rounded-lg" />
+            <h3 className="mb-3 font-mono text-xs text-neutral-500 dark:text-neutral-400">{t.userFlow}</h3>
+            <div className="mx-auto w-full max-w-[280px] rounded-xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-950">
+              <AutoplayVideo src="/videos/user-flow.mp4" width={390} height={844} muted loop playsInline className="w-full rounded-md" />
             </div>
           </div>
           <div>
-            <h3 className="mb-3 text-sm font-semibold text-neutral-500 dark:text-neutral-400">{t.heroFlow}</h3>
-            <div className="mx-auto w-full max-w-[280px] rounded-2xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-950">
-              <AutoplayVideo src="/videos/hero-flow.mp4" width={390} height={844} muted loop playsInline className="w-full rounded-lg" />
+            <h3 className="mb-3 font-mono text-xs text-neutral-500 dark:text-neutral-400">{t.heroFlow}</h3>
+            <div className="mx-auto w-full max-w-[280px] rounded-xl border border-neutral-200 bg-white p-3 dark:border-neutral-800 dark:bg-neutral-950">
+              <AutoplayVideo src="/videos/hero-flow.mp4" width={390} height={844} muted loop playsInline className="w-full rounded-md" />
             </div>
           </div>
         </div>

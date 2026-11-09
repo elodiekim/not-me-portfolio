@@ -1,5 +1,6 @@
 import Container from '../components/Container'
 import SectionHeading from '../components/SectionHeading'
+import Button from '../components/Button'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const COPY = {
@@ -34,33 +35,28 @@ export default function AdminShowcase() {
   return (
     <section id="admin" className="scroll-mt-14 py-20">
       <Container>
-        <SectionHeading eyebrow="Operations" title="Admin Dashboard" description={t.description} />
+        <SectionHeading index="02" eyebrow="Operations" title="Admin Dashboard" description={t.description} />
 
         <img
           src="/screens/admin/dashboard.png"
           alt="NotMe Admin dashboard — KPI cards, mission status summary, recent missions table"
-          className="w-full rounded-2xl border border-neutral-200 dark:border-neutral-800"
+          className="w-full rounded-xl border border-neutral-200 dark:border-neutral-800"
         />
 
         <div className="mt-8 grid gap-6 sm:grid-cols-3">
           {t.scope.map((item) => (
-            <div key={item.title} className="rounded-2xl border border-neutral-200 p-5 dark:border-neutral-800">
+            <div key={item.title} className="rounded-xl border border-neutral-200 p-5 dark:border-neutral-800">
               <h3 className="font-semibold">{item.title}</h3>
               <p className="mt-2 text-sm text-neutral-600 dark:text-neutral-400">{item.body}</p>
             </div>
           ))}
         </div>
 
-        <div className="mt-8 flex flex-wrap items-center gap-3 rounded-2xl bg-primary/10 p-5">
-          <p className="text-sm text-ink dark:text-neutral-100">{t.ctaText}</p>
-          <a
-            href="https://not-me-admin.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-            className="ml-auto shrink-0 rounded-full bg-primary px-5 py-2 text-sm font-semibold text-ink transition-opacity hover:opacity-90"
-          >
+        <div className="mt-8 flex flex-wrap items-center gap-4 border-y border-neutral-200 py-5 dark:border-neutral-800">
+          <p className="text-sm text-neutral-700 dark:text-neutral-300">{t.ctaText}</p>
+          <Button href="https://not-me-admin.vercel.app" target="_blank" rel="noreferrer" size="md" className="ml-auto shrink-0">
             {t.ctaButton}
-          </a>
+          </Button>
         </div>
       </Container>
     </section>

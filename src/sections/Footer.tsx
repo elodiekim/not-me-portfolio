@@ -13,15 +13,15 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-200 py-12 dark:border-neutral-800">
       <Container className="flex flex-col items-center gap-4 text-center">
-        <div className="flex gap-6 text-sm font-medium">
+        <div className="flex gap-6 font-mono text-xs">
           <a href="https://github.com/elodiekim/not-me" target="_blank" rel="noreferrer" className="hover:text-primary-dark">
-            GitHub — notme-app
+            notme-app
           </a>
           <a href="https://github.com/elodiekim/not-me-admin" target="_blank" rel="noreferrer" className="hover:text-primary-dark">
-            GitHub — notme-admin
+            notme-admin
           </a>
           <a href="mailto:elodiekim93@gmail.com" className="hover:text-primary-dark">
-            Email
+            elodiekim93@gmail.com
           </a>
         </div>
         <p className="text-xs text-neutral-400">{t.tagline}</p>

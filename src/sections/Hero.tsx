@@ -1,4 +1,5 @@
 import Container from '../components/Container'
+import Button from '../components/Button'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const COPY = {
@@ -24,20 +25,19 @@ export default function Hero() {
     <section id="top" className="scroll-mt-14 pt-6 pb-8 sm:pt-16 sm:pb-20">
       <Container className="grid items-center gap-6 sm:grid-cols-2 sm:gap-12">
         <div className="text-center sm:text-left">
-          <span className="text-sm font-semibold text-primary-dark">{t.eyebrow}</span>
+          <span className="text-sm font-semibold text-primary-dark">
+            <span className="font-mono text-xs text-neutral-400 dark:text-neutral-600">00 /</span> {t.eyebrow}
+          </span>
 
-          <h1 className="mt-3 text-[1.6875rem] font-bold tracking-tight break-keep text-balance sm:mt-5 sm:text-[2rem]">
+          <h1 className="mt-3 text-[1.6875rem] font-extrabold tracking-tight break-keep text-balance sm:mt-5 sm:text-[2rem]">
             {t.headline}
           </h1>
           <p className="mt-3 text-neutral-600 sm:mt-4 dark:text-neutral-400">{t.subcopy}</p>
 
           <div className="mt-5 flex flex-col items-center gap-3 sm:mt-8 sm:items-start sm:gap-4">
-            <a
-              href="#walkthrough"
-              className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-ink transition-opacity hover:opacity-90"
-            >
+            <Button href="#walkthrough" size="lg">
               {t.primaryCta}
-            </a>
+            </Button>
             <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
               <a
                 href="https://not-me-admin.vercel.app"

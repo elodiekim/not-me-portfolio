@@ -1,4 +1,5 @@
 import Container from './Container'
+import Button from './Button'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const LINKS = {
@@ -52,14 +53,9 @@ export default function Nav() {
               EN
             </button>
           </div>
-          <a
-            href="https://not-me-admin.vercel.app"
-            target="_blank"
-            rel="noreferrer"
-            className="rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-ink transition-opacity hover:opacity-90"
-          >
+          <Button href="https://not-me-admin.vercel.app" target="_blank" rel="noreferrer" size="sm">
             Live Demo
-          </a>
+          </Button>
         </div>
       </Container>
     </header>
