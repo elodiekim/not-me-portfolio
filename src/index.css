@@ -6,6 +6,8 @@
   --color-primary: #ffb400;
   --color-primary-dark: #d99600;
   --color-ink: #111111;
+  --color-charcoal: #57534e;
+  --color-cream: #fff9ec;
 }
 
 @media (prefers-color-scheme: dark) {
