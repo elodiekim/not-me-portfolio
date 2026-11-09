@@ -37,25 +37,22 @@ export default function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <div className="flex items-center gap-1.5 text-sm font-semibold">
-            <button
-              type="button"
-              onClick={() => setLang('ko')}
-              aria-pressed={lang === 'ko'}
-              className={`px-1 py-1 transition-colors ${lang === 'ko' ? 'text-ink dark:text-neutral-100' : 'text-neutral-400 hover:text-neutral-600 dark:text-neutral-600 dark:hover:text-neutral-400'}`}
-            >
-              KO
-            </button>
-            <span className="text-neutral-300 dark:text-neutral-700">·</span>
-            <button
-              type="button"
-              onClick={() => setLang('en')}
-              aria-pressed={lang === 'en'}
-              className={`px-1 py-1 transition-colors ${lang === 'en' ? 'text-ink dark:text-neutral-100' : 'text-neutral-400 hover:text-neutral-600 dark:text-neutral-600 dark:hover:text-neutral-400'}`}
-            >
-              EN
-            </button>
-          </div>
+          <button
+            type="button"
+            role="switch"
+            aria-checked={lang === 'en'}
+            aria-label={lang === 'ko' ? 'Switch language to English' : '언어를 한국어로 전환'}
+            onClick={() => setLang(lang === 'ko' ? 'en' : 'ko')}
+            className="flex items-center gap-2 py-1"
+          >
+            <span className={`font-mono text-[11px] transition-colors ${lang === 'ko' ? 'text-ink dark:text-neutral-100' : 'text-neutral-400 dark:text-neutral-600'}`}>KO</span>
+            <span className="relative h-4 w-[34px] shrink-0 rounded-full border-[1.5px] border-ink dark:border-neutral-100">
+              <span
+                className={`absolute top-[1px] left-[1px] h-[10px] w-[10px] rounded-full bg-ink transition-transform duration-150 dark:bg-neutral-100 ${lang === 'en' ? 'translate-x-4' : ''}`}
+              />
+            </span>
+            <span className={`font-mono text-[11px] transition-colors ${lang === 'en' ? 'text-ink dark:text-neutral-100' : 'text-neutral-400 dark:text-neutral-600'}`}>EN</span>
+          </button>
           <Button href="https://not-me-admin.vercel.app" target="_blank" rel="noreferrer" size="sm">
             Live Demo
           </Button>
