@@ -15,12 +15,9 @@ export default function Button({
   return (
     <a
       {...props}
-      className={`group inline-flex items-center gap-2 rounded-sm bg-primary font-semibold text-ink transition-colors duration-150 hover:bg-primary-dark ${SIZES[size]} ${className}`}
+      className={`inline-block rounded-sm bg-primary font-semibold text-ink transition-colors duration-150 hover:bg-primary-dark ${SIZES[size]} ${className}`}
     >
       {children}
-      <span aria-hidden="true" className="inline-block transition-transform duration-150 group-hover:translate-x-0.5">
-        →
-      </span>
     </a>
   )
 }
