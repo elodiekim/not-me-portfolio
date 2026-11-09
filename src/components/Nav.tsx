@@ -37,18 +37,21 @@ export default function Nav() {
           ))}
         </nav>
         <div className="flex items-center gap-3">
-          <div className="flex overflow-hidden rounded-full border border-neutral-300 text-xs font-semibold dark:border-neutral-700">
+          <div className="flex items-center gap-1.5 text-sm font-semibold">
             <button
               type="button"
               onClick={() => setLang('ko')}
-              className={`px-2.5 py-1 transition-colors ${lang === 'ko' ? 'bg-primary text-ink' : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100'}`}
+              aria-pressed={lang === 'ko'}
+              className={`px-1 py-1 transition-colors ${lang === 'ko' ? 'text-ink dark:text-neutral-100' : 'text-neutral-400 hover:text-neutral-600 dark:text-neutral-600 dark:hover:text-neutral-400'}`}
             >
               KO
             </button>
+            <span className="text-neutral-300 dark:text-neutral-700">·</span>
             <button
               type="button"
               onClick={() => setLang('en')}
-              className={`px-2.5 py-1 transition-colors ${lang === 'en' ? 'bg-primary text-ink' : 'text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100'}`}
+              aria-pressed={lang === 'en'}
+              className={`px-1 py-1 transition-colors ${lang === 'en' ? 'text-ink dark:text-neutral-100' : 'text-neutral-400 hover:text-neutral-600 dark:text-neutral-600 dark:hover:text-neutral-400'}`}
             >
               EN
             </button>
