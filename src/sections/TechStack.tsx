@@ -11,11 +11,23 @@ const COPY = {
   en: { consumer: 'Consumer App', admin: 'Admin Dashboard', shared: 'Shared Backend' },
 }
 
+function Badge({ label }: { label: string }) {
+  return (
+    <span className="rounded-full border border-neutral-200 bg-white px-3 py-1 font-mono text-xs text-neutral-700 dark:border-neutral-800 dark:bg-neutral-950 dark:text-neutral-300">
+      {label}
+    </span>
+  )
+}
+
 function BadgeGroup({ title, items }: { title: string; items: string[] }) {
   return (
-    <div className="border-t border-neutral-200 pt-4 dark:border-neutral-800">
-      <h3 className="mb-2 font-mono text-xs text-neutral-500 dark:text-neutral-400">{title}</h3>
-      <p className="font-mono text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">{items.join('  ·  ')}</p>
+    <div>
+      <h3 className="mb-3 font-mono text-xs text-neutral-500 dark:text-neutral-400">{title}</h3>
+      <div className="flex flex-wrap gap-2">
+        {items.map((item) => (
+          <Badge key={item} label={item} />
+        ))}
+      </div>
     </div>
   )
 }
