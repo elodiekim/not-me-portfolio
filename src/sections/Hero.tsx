@@ -12,7 +12,7 @@ const COPY = {
   en: {
     eyebrow: 'Uber for Weird Problems',
     headline: 'An on-demand marketplace, starting from cockroach removal requests',
-    subcopy: 'Product, design, the app, and the ops admin — a solo full-stack MVP.',
+    subcopy: 'Product, design, the app, and the ops admin — a solo full‑stack MVP.',
     primaryCta: 'View App Flow',
   },
 }
@@ -32,7 +32,7 @@ export default function Hero() {
           <h1 className="mt-3 text-[1.6875rem] font-extrabold tracking-tight break-keep text-balance sm:mt-5 sm:text-[2rem]">
             {t.headline}
           </h1>
-          <p className="mt-3 text-neutral-600 sm:mt-4 dark:text-neutral-400">{t.subcopy}</p>
+          <p className="mt-3 text-pretty text-neutral-600 sm:mt-4 dark:text-neutral-400">{t.subcopy}</p>
 
           <div className="mt-5 flex flex-col items-center gap-3 sm:mt-8 sm:items-start sm:gap-4">
             <Button href="#walkthrough" size="lg">
