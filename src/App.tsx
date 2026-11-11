@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import { LanguageProvider } from './i18n/LanguageContext'
 import Nav from './components/Nav'
 import Hero from './sections/Hero'
-import Overview from './sections/Overview'
 import Problem from './sections/Problem'
 import Walkthrough from './sections/Walkthrough'
 import AdminShowcase from './sections/AdminShowcase'
@@ -26,7 +25,6 @@ function App() {
       <Nav />
       <main>
         <Hero />
-        <Overview />
         <Walkthrough />
         <AdminShowcase />
         <Engineering />
