@@ -32,3 +32,8 @@ body {
   font-family: var(--font-sans);
   @apply bg-white text-neutral-900 dark:bg-neutral-950 dark:text-neutral-100;
 }
+
+html[lang='en'] h1,
+html[lang='en'] h2 {
+  font-family: 'Sora', sans-serif;
+}
