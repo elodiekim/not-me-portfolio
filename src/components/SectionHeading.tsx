@@ -15,7 +15,7 @@ export default function SectionHeading({
         <span className="text-neutral-400 dark:text-neutral-600">{index}</span> / {eyebrow}
       </p>
       <h2 className="mt-3 text-2xl font-bold tracking-tight break-keep sm:text-3xl">{title}</h2>
-      {description && <p className="mt-3 max-w-2xl text-neutral-600 dark:text-neutral-400">{description}</p>}
+      {description && <p className="mt-3 max-w-3xl text-pretty text-neutral-600 dark:text-neutral-400">{description}</p>}
     </div>
   )
 }
