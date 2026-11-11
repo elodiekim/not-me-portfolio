@@ -12,7 +12,12 @@ const COPY = {
   en: {
     eyebrow: 'Uber for Weird Problems',
     headline: 'An on-demand marketplace, starting from cockroach removal requests',
-    subcopy: 'Product, design, the app, and the ops admin — a solo full‑stack MVP.',
+    subcopy: (
+      <>
+        Product, design, the app, and the ops admin
+        <br />— a solo full‑stack MVP.
+      </>
+    ),
     primaryCta: 'View App Flow',
   },
 }
