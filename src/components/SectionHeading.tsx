@@ -1,3 +1,5 @@
+import type { ReactNode } from 'react'
+
 export default function SectionHeading({
   index,
   eyebrow,
@@ -6,7 +8,7 @@ export default function SectionHeading({
 }: {
   index: string
   eyebrow: string
-  title: string
+  title: ReactNode
   description?: string
 }) {
   return (

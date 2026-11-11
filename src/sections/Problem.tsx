@@ -12,7 +12,12 @@ const COPY = {
       '첫 MVP에서는 바퀴벌레 제거 하나에만 집중했습니다. 요청부터 매칭, 완료, 리뷰까지의 한 흐름이 실제로 작동하는지 확인하는 것이 우선이었기 때문입니다.',
   },
   en: {
-    title: "Starting with the moment that's most urgent — and hardest to explain",
+    title: (
+      <>
+        Starting with the moment that&apos;s most urgent
+        <br />— and hardest to explain
+      </>
+    ),
     body1: "When a cockroach shows up in your home, what you need isn't search results or a booking form — it's someone who can help right now.",
     body2: "NotMe started as a way to offer one choice, in that short, awkward moment: you don't have to handle it yourself.",
     quote: '"Could an unfamiliar, everyday problem be handed off to someone nearby, right when you need it?"',
