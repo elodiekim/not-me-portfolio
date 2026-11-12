@@ -45,7 +45,7 @@ export default function Hero() {
             </Button>
             <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
               <a
-                href="https://not-me-admin.vercel.app"
+                href="https://not-me-admin.vercel.app/login?demo=1"
                 target="_blank"
                 rel="noreferrer"
                 className="underline-offset-4 transition-colors hover:text-neutral-900 hover:underline dark:hover:text-neutral-100"

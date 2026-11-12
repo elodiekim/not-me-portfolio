@@ -54,7 +54,7 @@ export default function AdminShowcase() {
 
         <div className="mt-8 flex flex-wrap items-center gap-4 border-y border-neutral-200 py-5 dark:border-neutral-800">
           <p className="text-sm text-neutral-700 dark:text-neutral-300">{t.ctaText}</p>
-          <Button href="https://not-me-admin.vercel.app" target="_blank" rel="noreferrer" size="md" variant="secondary" className="ml-auto shrink-0">
+          <Button href="https://not-me-admin.vercel.app/login?demo=1" target="_blank" rel="noreferrer" size="md" variant="secondary" className="ml-auto shrink-0">
             {t.ctaButton}
           </Button>
         </div>
