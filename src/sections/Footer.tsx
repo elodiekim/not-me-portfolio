@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <footer className="border-t border-neutral-200 py-12 dark:border-neutral-800">
       <Container className="flex flex-col items-center gap-4 text-center">
-        <div className="flex gap-6 font-mono text-xs">
+        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 font-mono text-xs">
           <a href="https://www.linkedin.com/in/elodie-sujung" target="_blank" rel="noreferrer" className="hover:text-primary-dark">
             LinkedIn
           </a>
