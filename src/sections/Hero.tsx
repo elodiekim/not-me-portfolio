@@ -1,5 +1,4 @@
 import Container from '../components/Container'
-import Button from '../components/Button'
 import { useLanguage } from '../i18n/LanguageContext'
 
 const COPY = {
@@ -7,7 +6,6 @@ const COPY = {
     eyebrow: '생활 문제 해결 매칭 서비스',
     headline: '바퀴벌레 제거 요청에서 시작한 온디맨드 마켓플레이스',
     subcopy: '기획부터 소비자 앱, 운영 어드민, 권한 설계까지 혼자 만든 풀스택 MVP.',
-    primaryCta: '앱 플로우 보기',
   },
   en: {
     eyebrow: 'Uber for Weird Problems',
@@ -18,7 +16,6 @@ const COPY = {
         <br />— a solo full‑stack MVP.
       </>
     ),
-    primaryCta: 'View App Flow',
   },
 }
 
@@ -40,9 +37,6 @@ export default function Hero() {
           <p className="mt-3 text-pretty text-neutral-600 sm:mt-4 dark:text-neutral-400">{t.subcopy}</p>
 
           <div className="mt-5 flex flex-col items-center gap-3 sm:mt-8 sm:items-start sm:gap-4">
-            <Button href="#walkthrough" size="lg">
-              {t.primaryCta}
-            </Button>
             <div className="flex items-center gap-4 text-sm text-neutral-500 dark:text-neutral-400">
               <a
                 href="https://not-me-app.vercel.app/?demo=1"
