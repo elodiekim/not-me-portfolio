@@ -50,7 +50,7 @@ export default function Hero() {
                 rel="noreferrer"
                 className="underline-offset-4 transition-colors hover:text-neutral-900 hover:underline dark:hover:text-neutral-100"
               >
-                Try the App
+                App Demo
               </a>
               <span className="text-neutral-300 dark:text-neutral-700">·</span>
               <a
