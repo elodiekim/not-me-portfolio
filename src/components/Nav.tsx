@@ -53,8 +53,8 @@ export default function Nav() {
             </span>
             <span className={`font-mono text-[11px] transition-colors ${lang === 'en' ? 'text-ink dark:text-neutral-100' : 'text-neutral-400 dark:text-neutral-600'}`}>EN</span>
           </button>
-          <Button href="https://not-me-admin.vercel.app/login?demo=1" target="_blank" rel="noreferrer" size="sm" variant="secondary">
-            Live Demo
+          <Button href="https://not-me-app.vercel.app/?demo=1" target="_blank" rel="noreferrer" size="sm" variant="secondary">
+            App Demo
           </Button>
         </div>
       </Container>
